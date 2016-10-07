@@ -16,14 +16,15 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        menu.add("Test1");
-        menu.add("Test2");
+        menu.add(0, 1, 0, "Test1");
+        menu.add(0, 2, 0, "Test2");
+
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getTitle().equals("Test1"))
+        if (item.getItemId() == 1)
         {
             Toast.makeText(MainActivity.this, "Test1", Toast.LENGTH_SHORT).show();
         }
